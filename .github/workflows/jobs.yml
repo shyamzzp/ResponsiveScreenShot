@@ -101,7 +101,7 @@ jobs:
       with:
         server_address: smtp.gmail.com
         port: 465
-        username: noreply.testing@gmail.com
+        username: noreply.screen@gmail.com
         password: Testing@22
         subject: Workflow finished
         body: Job completed ${{job.status}}
