@@ -96,7 +96,7 @@ jobs:
         name: businesscenter-mobile
     - run: rm ./screenshots/*
       
-      name: Sending Mail
+    - name: Sending Mail
       uses: wadeww/send-email-action@master
       with:
         server_address: smtp.gmail.com
