@@ -103,7 +103,7 @@ jobs:
         username: noreply.screen@gmail.com
         password: Testing@22
         subject: Workflow finished
-        body: Job completed ${{job.status}} Build job of ${{github.repository}} completed successfully!
+        body: <b>Job completed ${{job.status}} Build job of ${{github.repository}} completed successfully!</b>
         html_body: file://body.html
         to: shyam22.co@gmail.com
         from: Me
