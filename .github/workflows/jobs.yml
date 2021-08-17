@@ -107,3 +107,4 @@ jobs:
         html_body: file://README.md
         to: shyam22.co@gmail.com
         from: Me
+        convert_markdown: true
