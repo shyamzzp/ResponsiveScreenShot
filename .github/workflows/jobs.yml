@@ -95,3 +95,15 @@ jobs:
         path: screenshots
         name: businesscenter-mobile
     - run: rm ./screenshots/*
+      
+      name: Sending Mail
+      uses: wadeww/send-email-action@master
+      with:
+        server_address: smtp.gmail.com
+        port: 465
+        username: noreply.testing@gmail.com
+        password: Testing@22
+        subject: Workflow finished
+        body: Job completed ${{job.status}}
+        to: shyam22.co@gmail.com
+        from: Me
