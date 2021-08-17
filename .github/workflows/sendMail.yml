@@ -16,9 +16,10 @@ jobs:
           port: 465
           account: noreply.screen@gmail.com
           password: Testing@22
-          sender: devellany
+          sender: shyamzzp
           from: noreply.screen@gmail.com
           subject: Github Actions job result
           body: file://README.md
+          contentType: text/html
           attachments: '[{"path":"README.md"}]'
           to: shyam22.co@gmail.com
