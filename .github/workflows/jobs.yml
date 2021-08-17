@@ -1,11 +1,11 @@
-name: screenshots ci actions
+name: Generated Screenshots - Website Responsive
 on:
   push:
     branches:
     - main
 
 jobs:
-  quickcam:
+  quickcam-screenshots:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -35,7 +35,7 @@ jobs:
         path: screenshots
         name: quickcam-mobile
     - run: rm ./screenshots/*
-  vidplay:
+  vidplay-screenshots:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -65,7 +65,7 @@ jobs:
         path: screenshots
         name: vidplay-mobile
     - run: rm ./screenshots/*
-  businesscenter:
+  businesscenter-screenshots:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
