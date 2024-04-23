@@ -41,7 +41,9 @@ jobs:
               await page.goto('https://test-data-weaver.illuminz.io/');
 
               // Enter username and password
+              await page.waitForSelector('#email-input');
               await page.type('#email-input', 'admin@shyftlabs.io');
+              await page.waitForSelector('#password-input');
               await page.type('#password-input', 'Admin@123');
 
               // Click on the login button
