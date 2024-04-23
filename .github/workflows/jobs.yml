@@ -17,11 +17,11 @@ jobs:
     - name: screenshots-desktop-vidplay
       uses: flameddd/screenshots-ci-action@v1.1.1
       with:
-        url: https://alpha.quickcam.app/
+        url: https://test-data-weaver.illuminz.io/
         fullPage: true
     - uses: actions/upload-artifact@v2
       with:
-        name: quickcam-desktop
+        name: screenshots-desktop
         path: screenshots
     - run: rm ./screenshots/*
     - name: screenshots-mobile-facebook
@@ -34,7 +34,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         path: screenshots
-        name: quickcam-mobile
+        name: screenshots-mobile
     - run: rm ./screenshots/*
 #   vidplay-screenshots:
 #     runs-on: ubuntu-latest
