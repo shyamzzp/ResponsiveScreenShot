@@ -51,7 +51,7 @@ jobs:
               ]);
 
               // Capture screenshot
-              await page.screenshot({ path: `${device.name}.png`, fullPage: true });
+              await page.screenshot({ path: 'heelo.png', fullPage: true });
 
               // Close the page
               await page.close();
