@@ -53,7 +53,7 @@ jobs:
               ]);
 
               // Capture screenshot
-              await page.screenshot({ path: `${device.name}`, fullPage: true });
+              await page.screenshot({ path: `${device.name}.png`, fullPage: true });
 
               // Close the page
               await page.close();
