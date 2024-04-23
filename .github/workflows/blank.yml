@@ -17,7 +17,7 @@ jobs:
       # Login to the website
       - name: Login to website
         run: |
-          const puppeteer = require('puppeteer');
+          node -e "const puppeteer = require('puppeteer');
 
           (async () => {
             const browser = await puppeteer.launch();
@@ -59,7 +59,7 @@ jobs:
 
             // Close the browser
             await browser.close();
-          })();
+          })();"
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
