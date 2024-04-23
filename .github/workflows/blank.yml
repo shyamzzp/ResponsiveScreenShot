@@ -69,7 +69,10 @@ jobs:
       - name: Move PNG files
         run: |
           mkdir -p screenshots
-          find . -maxdepth 1 -type f -name '*.png' -exec mv {} screenshots/ \;
+          mv *.png screenshots/ || true
+
+      - name: List PNG files in screenshots directory
+        run: ls -l screenshots/
 
       # Upload only PNG files as artifacts
       - name: Upload PNG files
