@@ -47,7 +47,7 @@ jobs:
               // Click on the login button
               await Promise.all([
                 page.waitForNavigation(),
-                page.click('#login-button')
+                page.click('#login-btn')
               ]);
 
               // Capture screenshot
