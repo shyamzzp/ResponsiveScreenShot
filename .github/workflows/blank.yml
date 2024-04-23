@@ -65,13 +65,17 @@ jobs:
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
-
+      - name: Upload PNG files
+        run: |
+          mkdir -p screenshots
+          mv *.png screenshots/
+        shell: bash
+        
       # Upload screenshots as artifacts
       - uses: actions/upload-artifact@v2
         with:
           name: screenshots
-          path: |
-            ${{ join(filter(glob("**/*.png"), include("**/*.png")), '\n') }}
+          path: screenshots/
 
       # Cleanup
       - run: rm -rf ./*.png
