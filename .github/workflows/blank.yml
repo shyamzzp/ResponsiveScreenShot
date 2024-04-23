@@ -65,17 +65,21 @@ jobs:
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
-      - name: Upload PNG files
+      # Move PNG files to screenshots directory
+      - name: Move PNG files
         run: |
           mkdir -p screenshots
-          mv *.png screenshots/
-        shell: bash
-        
-      # Upload screenshots as artifacts
-      - uses: actions/upload-artifact@v2
+          find . -maxdepth 1 -type f -name '*.png' -exec mv {} screenshots/ \;
+
+      # Upload only PNG files as artifacts
+      - name: Upload PNG files
+        uses: actions/upload-artifact@v2
         with:
           name: screenshots
           path: screenshots/
+
+      # Cleanup
+      - run: rm -rf screenshots/
 
       # Cleanup
       - run: rm -rf ./*.png
