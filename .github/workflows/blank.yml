@@ -38,7 +38,7 @@ jobs:
               await page.setUserAgent(device.userAgent);
 
               // Navigate to the login page
-              await page.goto('https://test-data-weaver.illuminz.io/');
+              await page.goto('https://test-data-weaver.illuminz.io/login');
 
               // Enter username and password
               await page.waitForSelector('#email-input');
