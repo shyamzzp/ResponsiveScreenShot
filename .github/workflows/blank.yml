@@ -42,9 +42,9 @@ jobs:
 
               // Enter username and password
               await page.waitForSelector('#email-input');
-              await page.type('#email-input', 'admin@shyftlabs.io');
+              await page.type('#email-input', '');
               await page.waitForSelector('#password-input');
-              await page.type('#password-input', 'Admin@123');
+              await page.type('#password-input', '');
 
               // Click on the login button
               await Promise.all([
